@@ -1,0 +1,40 @@
+
+{# EXTENDE CONTEÚDOS PARA AS PÁGINAS DA APLICAÇÃO #}
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   
+    {% block nativeTitle %}
+        <title>Ecoleta</title>
+    {% endblock nativeTitle %}
+    
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    {% block nativeStyles %}{% endblock nativeStyles %}
+
+    
+    
+</head>
+<body>
+
+    <div id="{{ pageId }}">
+        {% block nativeContent %} 
+        {% endblock nativeContent %}        
+    </div> 
+
+    {% block nativeModal %}
+    {% endblock nativeModal %}
+
+    {% block nativeScripts %}
+    {% endblock nativeScripts %}
+
+
+
+</body>
+</html>
